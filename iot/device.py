@@ -1,5 +1,7 @@
 from abc import abstractmethod
 
+from iot.message import MessageType
+
 
 class Device:
     @abstractmethod
@@ -11,7 +13,7 @@ class Device:
         pass
 
     @abstractmethod
-    def send_message(self) -> None:
+    def send_message(self, message_type: MessageType, data: str) -> None:
         pass
 
     @abstractmethod
